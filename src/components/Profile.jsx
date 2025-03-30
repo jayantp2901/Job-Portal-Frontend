@@ -9,6 +9,7 @@ import AppliedJobTable from './AppliedJobTable';
 import UpdateProfileDialog from './UpdateProfileDialog';
 import { useSelector } from 'react-redux';
 import useGetAppliedJobs from '@/hooks/useGetAppliedJobs';
+import Chatbot from './Chatbot';
 
 const isResume = true;
 
@@ -58,7 +59,6 @@ const Profile = () => {
 
 
                     <div className='my-5'>
-                        <h1>Skills</h1>
                         {/* Skills Section */}
                         <div className="mt-6">
                             <h2 className="text-lg font-semibold mb-2">Skills</h2>
@@ -80,7 +80,6 @@ const Profile = () => {
                     </div>
                 </div>
 
-                {/* Work Experience Section */}
                 <div className="bg-white shadow-md border border-gray-200 rounded-2xl mt-8 p-6">
                     <div className="flex items-center justify-between mb-4">
                         <div className="flex items-center gap-2">
@@ -91,7 +90,18 @@ const Profile = () => {
                             <Plus className="w-5 h-5" />
                         </Button>
                     </div>
-                    <p className="text-gray-600">{user?.profile?.experience || "No work experience added."}</p>
+
+                    {user?.profile?.experiences && user?.profile?.experiences.length > 0 ? (
+                        experiences.map((exp, index) => (
+                            <div key={index} className='bg-gray-200 rounded-2xl p-4 mb-2'>
+                                <h2 className='text-lg font-semibold'>{exp.title}</h2>
+                                <p className="text-blue-500">{exp.link}</p>
+                                <p>{exp.description}</p>
+                            </div>
+                        ))
+                    ) : (
+                        <p className="text-gray-500 text-center py-4">No Work Experience Added</p>
+                    )}
                 </div>
 
                 {/* Projects Section */}
@@ -105,7 +115,17 @@ const Profile = () => {
                             <Plus className="w-5 h-5" />
                         </Button>
                     </div>
-                    <p className="text-gray-600">{user?.profile?.projects || "No projects added."}</p>
+                    {user?.profile?.project && user?.profile?.project.length > 0 ? (
+                        project.map((project, index) => (
+                            <div key={index} className='bg-gray-200 rounded-2xl p-4 mb-2'>
+                                <h2 className='text-lg font-semibold'>{project.title}</h2>
+                                <p className="text-blue-500">{project.link}</p>
+                                <p>{project.description}</p>
+                            </div>
+                        ))
+                    ) : (
+                        <p className="text-gray-500 text-center py-4">No Work Experience Added</p>
+                    )}
                 </div>
 
                 {/* Achievements Section */}
@@ -119,7 +139,17 @@ const Profile = () => {
                             <Plus className="w-5 h-5" />
                         </Button>
                     </div>
-                    <p className="text-gray-600">{user?.profile?.achievements || "No achievements added."}</p>
+                    {user?.profile?.achievements && user?.profile?.achievements.length > 0 ? (
+                        achievements.map((achievements, index) => (
+                            <div key={index} className='bg-gray-200 rounded-2xl p-4 mb-2'>
+                                <h2 className='text-lg font-semibold'>{achievements.title}</h2>
+                                <p className="text-blue-500">{achievements.link}</p>
+                                <p>{achievements.description}</p>
+                            </div>
+                        ))
+                    ) : (
+                        <p className="text-gray-500 text-center py-4">No Work Experience Added</p>
+                    )}
                 </div>
 
                 {/* Applied Jobs Section */}
@@ -133,6 +163,9 @@ const Profile = () => {
             </div>
 
             <UpdateProfileDialog open={open} setOpen={setOpen} />
+
+            <Chatbot />
+
         </div>
     );
 };

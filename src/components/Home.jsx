@@ -26,6 +26,8 @@ const Home = () => {
       <HeroSection />
       <CategoryCarousel />
       <LatestJobs />
+      <Chatbot />
+
       <Footer />
     </div>
   );

@@ -1,71 +1,86 @@
 import React, { useState } from "react";
-import axios from "axios";
+import { IoMdSend } from "react-icons/io";
+import { BsRobot } from "react-icons/bs";
+import { IoClose } from "react-icons/io5"; // Import close icon
 
 const Chatbot = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
-  const [isVisible, setIsVisible] = useState(true); // ✅ Toggle chatbot visibility
 
-  const sendMessage = async (e) => {
-    e.preventDefault();
+  const toggleChatbot = () => setIsOpen(!isOpen);
+  const closeChat = () => setIsOpen(false); // Close chat function
+
+  const sendMessage = async () => {
     if (!input.trim()) return;
-
     const userMessage = { sender: "user", text: input };
-    setMessages((prevMessages) => [...prevMessages, userMessage]);
+    setMessages([...messages, userMessage]);
+    setInput("");
 
     try {
-      const response = await axios.post("http://localhost:5000/api/chat", {
-        message: input,
+      const response = await fetch("http://localhost:8000/api/v1/chatbot/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: input }),
       });
-
-      const botMessage = { sender: "bot", text: response.data.reply };
-      setMessages((prevMessages) => [...prevMessages, botMessage]);
+      const data = await response.json();
+      const botMessage = { sender: "bot", text: data.reply };
+      setMessages((prev) => [...prev, botMessage]);
     } catch (error) {
-      console.error("Error:", error);
+      console.error("Chatbot Error:", error);
+      setMessages((prev) => [...prev, { sender: "bot", text: "Error fetching response." }]);
     }
-
-    setInput("");
   };
 
   return (
     <div>
-        <h1>Chatbot</h1>
-      {/* Chatbot Icon (Toggles Chatbot) */}
-      <div className="chatbot" onClick={() => setIsVisible(!isVisible)}>
-        <i className="fa-brands fa-rocketchat chatbot-icon"></i>
+      {/* Floating Chatbot Icon */}
+      <div
+        className="fixed bottom-6 right-6 bg-blue-500 p-3 rounded-full cursor-pointer text-white shadow-lg hover:bg-blue-600"
+        onClick={toggleChatbot}
+      >
+        <BsRobot size={30} />
       </div>
 
-      {/* Chatbot Window */}
-      {isVisible && (
-        <div className="chatbot-div">
-          <div className="chatbot-header">
-            <h5>EduX AI Chatbot</h5>
-            <i className="fa-solid fa-times close-chatbot" onClick={() => setIsVisible(false)}></i>
+      {/* Chat Window */}
+      {isOpen && (
+        <div className="fixed bottom-16 right-6 bg-white w-80 h-96 shadow-lg rounded-lg flex flex-col overflow-hidden border">
+          {/* Header with Close Button */}
+          <div className="bg-blue-500 text-white p-3 font-semibold flex justify-between items-center">
+            <span>Job-Genie</span>
+            <button onClick={closeChat} className="text-white hover:text-gray-300">
+              <IoClose size={22} />
+            </button>
           </div>
-          <div className="chatbot-messages">
+
+          {/* Chat Messages */}
+          <div className="flex-1 p-3 overflow-y-auto">
             {messages.map((msg, index) => (
-              <div key={index} className={`chatbot-msg ${msg.sender}`}>
-                {msg.text}
+              <div key={index} className={`mb-2 ${msg.sender === "user" ? "text-right" : "text-left"}`}>
+                <span className={`px-3 py-2 rounded-lg inline-block ${msg.sender === "user" ? "bg-blue-500 text-white" : "bg-gray-200"}`}>
+                  {msg.text}
+                </span>
               </div>
             ))}
           </div>
-          <form onSubmit={sendMessage} className="chatbot-form">
+
+          {/* Input Section */}
+          <div className="p-2 flex border-t">
             <input
               type="text"
-              id="chatbot-input"
-              className="form-control chatbot-search"
-              placeholder="Ask me anything..."
+              className="flex-1 border rounded-lg p-2"
+              placeholder="Type a message..."
               value={input}
               onChange={(e) => setInput(e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && sendMessage()}
             />
-            <button type="submit" className="btn btn-success">
-              Send
+            <button onClick={sendMessage} className="ml-2 bg-blue-500 p-2 rounded-lg text-white">
+              <IoMdSend size={20} />
             </button>
-          </form>
+          </div>
         </div>
       )}
     </div>
-    
   );
 };
 

@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom'
 import useGetAllCompanies from '@/hooks/useGetAllCompanies'
 import { useDispatch } from 'react-redux'
 import { setSearchCompanyByText } from '@/redux/companySlice'
+import Chatbot from '../Chatbot'
 
 const Companies = () => {
     useGetAllCompanies();
@@ -31,6 +32,9 @@ const Companies = () => {
                 </div>
                 <CompaniesTable/>
             </div>
+
+            <Chatbot />
+
         </div>
     )
 }
