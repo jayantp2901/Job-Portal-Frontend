@@ -1,0 +1,117 @@
+Date : 2025-04-09 12:22:18
+Directory : d:\Projects\Job_Portal\frontend
+Total : 71 files,  11112 codes, 29 comments, 397 blanks, all 11538 lines
+
+Languages
++--------------------+------------+------------+------------+------------+------------+
+| language           | files      | code       | comment    | blank      | total      |
++--------------------+------------+------------+------------+------------+------------+
+| JSON               |          3 |      7,564 |          0 |          2 |      7,566 |
+| JavaScript JSX     |         50 |      3,198 |         23 |        350 |      3,571 |
+| JavaScript         |         11 |        256 |          4 |         15 |        275 |
+| CSS                |          2 |         56 |          0 |         21 |         77 |
+| HTML               |          1 |         13 |          0 |          1 |         14 |
+| Markdown           |          1 |         13 |          0 |          8 |         21 |
+| JSON with Comments |          1 |         10 |          2 |          0 |         12 |
+| XML                |          2 |          2 |          0 |          0 |          2 |
++--------------------+------------+------------+------------+------------+------------+
+
+Directories
++--------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                     | files      | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                        |         71 |     11,112 |         29 |        397 |     11,538 |
+| . (Files)                                                                |         10 |      7,714 |          3 |         15 |      7,732 |
+| public                                                                   |          1 |          1 |          0 |          0 |          1 |
+| src                                                                      |         60 |      3,397 |         26 |        382 |      3,805 |
+| src (Files)                                                              |          4 |        163 |          1 |         31 |        195 |
+| src\assets                                                               |          1 |          1 |          0 |          0 |          1 |
+| src\components                                                           |         43 |      2,976 |         22 |        330 |      3,328 |
+| src\components (Files)                                                   |         16 |      1,116 |         20 |        126 |      1,262 |
+| src\components\admin                                                     |         10 |        703 |          0 |         59 |        762 |
+| src\components\auth                                                      |          3 |        398 |          1 |         28 |        427 |
+| src\components\shared                                                    |          2 |        131 |          1 |         12 |        144 |
+| src\components\ui                                                        |         12 |        628 |          0 |        105 |        733 |
+| src\hooks                                                                |          5 |        115 |          0 |         10 |        125 |
+| src\lib                                                                  |          1 |          5 |          0 |          2 |          7 |
+| src\redux                                                                |          5 |        133 |          3 |          9 |        145 |
+| src\utils                                                                |          1 |          4 |          0 |          0 |          4 |
++--------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++--------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| filename                                                                 | language           | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| d:\Projects\Job_Portal\frontend\.eslintrc.cjs                            | JavaScript         |         21 |          0 |          1 |         22 |
+| d:\Projects\Job_Portal\frontend\README.md                                | Markdown           |         13 |          0 |          8 |         21 |
+| d:\Projects\Job_Portal\frontend\components.json                          | JSON               |         17 |          0 |          0 |         17 |
+| d:\Projects\Job_Portal\frontend\index.html                               | HTML               |         13 |          0 |          1 |         14 |
+| d:\Projects\Job_Portal\frontend\jsconfig.json                            | JSON with Comments |         10 |          2 |          0 |         12 |
+| d:\Projects\Job_Portal\frontend\package-lock.json                        | JSON               |      7,496 |          0 |          1 |      7,497 |
+| d:\Projects\Job_Portal\frontend\package.json                             | JSON               |         51 |          0 |          1 |         52 |
+| d:\Projects\Job_Portal\frontend\postcss.config.js                        | JavaScript         |          6 |          0 |          1 |          7 |
+| d:\Projects\Job_Portal\frontend\public\vite.svg                          | XML                |          1 |          0 |          0 |          1 |
+| d:\Projects\Job_Portal\frontend\src\App.css                              | CSS                |          0 |          0 |          1 |          1 |
+| d:\Projects\Job_Portal\frontend\src\App.jsx                              | JavaScript JSX     |         87 |          1 |          7 |         95 |
+| d:\Projects\Job_Portal\frontend\src\assets\react.svg                     | XML                |          1 |          0 |          0 |          1 |
+| d:\Projects\Job_Portal\frontend\src\components\AppliedJobTable.jsx       | JavaScript JSX     |         47 |          0 |          3 |         50 |
+| d:\Projects\Job_Portal\frontend\src\components\Browse.jsx                | JavaScript JSX     |         34 |          1 |          4 |         39 |
+| d:\Projects\Job_Portal\frontend\src\components\CategoryCarousel.jsx      | JavaScript JSX     |         39 |          0 |          4 |         43 |
+| d:\Projects\Job_Portal\frontend\src\components\Chatbot.jsx               | JavaScript JSX     |         73 |          5 |         10 |         88 |
+| d:\Projects\Job_Portal\frontend\src\components\FilterCard.jsx            | JavaScript JSX     |         58 |          0 |          8 |         66 |
+| d:\Projects\Job_Portal\frontend\src\components\HeroSection.jsx           | JavaScript JSX     |         36 |          0 |          5 |         41 |
+| d:\Projects\Job_Portal\frontend\src\components\Home.jsx                  | JavaScript JSX     |         31 |          0 |          6 |         37 |
+| d:\Projects\Job_Portal\frontend\src\components\Job.jsx                   | JavaScript JSX     |         47 |          1 |          6 |         54 |
+| d:\Projects\Job_Portal\frontend\src\components\JobDescription.jsx        | JavaScript JSX     |         83 |          0 |         11 |         94 |
+| d:\Projects\Job_Portal\frontend\src\components\Jobs.jsx                  | JavaScript JSX     |         57 |          1 |          8 |         66 |
+| d:\Projects\Job_Portal\frontend\src\components\LatestJobCards.jsx        | JavaScript JSX     |         24 |          0 |          3 |         27 |
+| d:\Projects\Job_Portal\frontend\src\components\LatestJobs.jsx            | JavaScript JSX     |         17 |          1 |          4 |         22 |
+| d:\Projects\Job_Portal\frontend\src\components\NotFound.jsx              | JavaScript JSX     |         34 |          0 |          2 |         36 |
+| d:\Projects\Job_Portal\frontend\src\components\Profile.jsx               | JavaScript JSX     |        165 |          6 |         16 |        187 |
+| d:\Projects\Job_Portal\frontend\src\components\UpdateProfileData.jsx     | JavaScript JSX     |        181 |          3 |         15 |        199 |
+| d:\Projects\Job_Portal\frontend\src\components\UpdateProfileDialog.jsx   | JavaScript JSX     |        190 |          2 |         21 |        213 |
+| d:\Projects\Job_Portal\frontend\src\components\admin\AdminJobs.jsx       | JavaScript JSX     |         37 |          0 |          5 |         42 |
+| d:\Projects\Job_Portal\frontend\src\components\admin\AdminJobsTable.jsx  | JavaScript JSX     |         64 |          0 |          6 |         70 |
+| d:\Projects\Job_Portal\frontend\src\components\admin\Applicants.jsx      | JavaScript JSX     |         36 |          0 |          5 |         41 |
+| d:\Projects\Job_Portal\frontend\src\components\admin\ApplicantsTable.jsx | JavaScript JSX     |         78 |          0 |          9 |         87 |
+| d:\Projects\Job_Portal\frontend\src\components\admin\Companies.jsx       | JavaScript JSX     |         37 |          0 |          5 |         42 |
+| d:\Projects\Job_Portal\frontend\src\components\admin\CompaniesTable.jsx  | JavaScript JSX     |         63 |          0 |          4 |         67 |
+| d:\Projects\Job_Portal\frontend\src\components\admin\CompanyCreate.jsx   | JavaScript JSX     |         59 |          0 |          5 |         64 |
+| d:\Projects\Job_Portal\frontend\src\components\admin\CompanySetup.jsx    | JavaScript JSX     |        137 |          0 |          8 |        145 |
+| d:\Projects\Job_Portal\frontend\src\components\admin\PostJob.jsx         | JavaScript JSX     |        174 |          0 |          8 |        182 |
+| d:\Projects\Job_Portal\frontend\src\components\admin\ProtectedRoute.jsx  | JavaScript JSX     |         18 |          0 |          4 |         22 |
+| d:\Projects\Job_Portal\frontend\src\components\auth\ForgotPass.jsx       | JavaScript JSX     |        126 |          1 |         16 |        143 |
+| d:\Projects\Job_Portal\frontend\src\components\auth\Login.jsx            | JavaScript JSX     |        117 |          0 |          6 |        123 |
+| d:\Projects\Job_Portal\frontend\src\components\auth\Signup.jsx           | JavaScript JSX     |        155 |          0 |          6 |        161 |
+| d:\Projects\Job_Portal\frontend\src\components\shared\Footer.jsx         | JavaScript JSX     |         27 |          0 |          3 |         30 |
+| d:\Projects\Job_Portal\frontend\src\components\shared\Navbar.jsx         | JavaScript JSX     |        104 |          1 |          9 |        114 |
+| d:\Projects\Job_Portal\frontend\src\components\ui\avatar.jsx             | JavaScript JSX     |         28 |          0 |          6 |         34 |
+| d:\Projects\Job_Portal\frontend\src\components\ui\badge.jsx              | JavaScript JSX     |         30 |          0 |          5 |         35 |
+| d:\Projects\Job_Portal\frontend\src\components\ui\button.jsx             | JavaScript JSX     |         43 |          0 |          5 |         48 |
+| d:\Projects\Job_Portal\frontend\src\components\ui\carousel.jsx           | JavaScript JSX     |        167 |          0 |         27 |        194 |
+| d:\Projects\Job_Portal\frontend\src\components\ui\dialog.jsx             | JavaScript JSX     |         82 |          0 |         13 |         95 |
+| d:\Projects\Job_Portal\frontend\src\components\ui\input.jsx              | JavaScript JSX     |         16 |          0 |          4 |         20 |
+| d:\Projects\Job_Portal\frontend\src\components\ui\label.jsx              | JavaScript JSX     |         12 |          0 |          5 |         17 |
+| d:\Projects\Job_Portal\frontend\src\components\ui\popover.jsx            | JavaScript JSX     |         20 |          0 |          6 |         26 |
+| d:\Projects\Job_Portal\frontend\src\components\ui\radio-group.jsx        | JavaScript JSX     |         25 |          0 |          5 |         30 |
+| d:\Projects\Job_Portal\frontend\src\components\ui\select.jsx             | JavaScript JSX     |        107 |          0 |         14 |        121 |
+| d:\Projects\Job_Portal\frontend\src\components\ui\sonner.jsx             | JavaScript JSX     |         25 |          0 |          4 |         29 |
+| d:\Projects\Job_Portal\frontend\src\components\ui\table.jsx              | JavaScript JSX     |         73 |          0 |         11 |         84 |
+| d:\Projects\Job_Portal\frontend\src\hooks\useGetAllAdminJobs.jsx         | JavaScript JSX     |         22 |          0 |          2 |         24 |
+| d:\Projects\Job_Portal\frontend\src\hooks\useGetAllCompanies.jsx         | JavaScript JSX     |         23 |          0 |          2 |         25 |
+| d:\Projects\Job_Portal\frontend\src\hooks\useGetAllJobs.jsx              | JavaScript JSX     |         23 |          0 |          2 |         25 |
+| d:\Projects\Job_Portal\frontend\src\hooks\useGetAppliedJobs.jsx          | JavaScript JSX     |         23 |          0 |          2 |         25 |
+| d:\Projects\Job_Portal\frontend\src\hooks\useGetCompanyById.jsx          | JavaScript JSX     |         24 |          0 |          2 |         26 |
+| d:\Projects\Job_Portal\frontend\src\index.css                            | CSS                |         56 |          0 |         20 |         76 |
+| d:\Projects\Job_Portal\frontend\src\lib\utils.js                         | JavaScript         |          5 |          0 |          2 |          7 |
+| d:\Projects\Job_Portal\frontend\src\main.jsx                             | JavaScript JSX     |         20 |          0 |          3 |         23 |
+| d:\Projects\Job_Portal\frontend\src\redux\applicationSlice.js            | JavaScript         |         14 |          0 |          1 |         15 |
+| d:\Projects\Job_Portal\frontend\src\redux\authSlice.js                   | JavaScript         |         18 |          1 |          1 |         20 |
+| d:\Projects\Job_Portal\frontend\src\redux\companySlice.js                | JavaScript         |         22 |          1 |          1 |         24 |
+| d:\Projects\Job_Portal\frontend\src\redux\jobSlice.js                    | JavaScript         |         41 |          1 |          1 |         43 |
+| d:\Projects\Job_Portal\frontend\src\redux\store.js                       | JavaScript         |         38 |          0 |          5 |         43 |
+| d:\Projects\Job_Portal\frontend\src\utils\constant.js                    | JavaScript         |          4 |          0 |          0 |          4 |
+| d:\Projects\Job_Portal\frontend\tailwind.config.js                       | JavaScript         |         76 |          1 |          0 |         77 |
+| d:\Projects\Job_Portal\frontend\vite.config.js                           | JavaScript         |         11 |          0 |          2 |         13 |
+| Total                                                                    |                    |     11,112 |         29 |        397 |     11,538 |
++--------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
