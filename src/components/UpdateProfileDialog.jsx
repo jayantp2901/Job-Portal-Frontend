@@ -20,7 +20,11 @@ const UpdateProfileDialog = ({ open, setOpen }) => {
         phoneNumber: user?.phoneNumber || "",
         bio: user?.profile?.bio || "",
         skills: user?.profile?.skills?.map(skill => skill) || "",
-        file: user?.profile?.resume || ""
+        linkedin: user?.profile?.linkedin || "",
+        portfolio: user?.profile?.portfolio || "",
+        leetcode: user?.profile?.leetcode || ""
+
+
     });
     const dispatch = useDispatch();
 
@@ -35,22 +39,32 @@ const UpdateProfileDialog = ({ open, setOpen }) => {
 
     const submitHandler = async (e) => {
         e.preventDefault();
-    
+        console.log("Submit button fired...!")
         const formData = new FormData();
         formData.append("fullname", input.fullname);
         formData.append("email", input.email);
         formData.append("phoneNumber", input.phoneNumber);
         formData.append("bio", input.bio);
-    
+        formData.append("linkedin", input.linkedin);
+        formData.append("portfolio", input.portfolio);
+        formData.append("leetcode", input.leetcode);
+
+
+
+
         // Convert skills array to JSON string (FormData does not support arrays directly)
-        const formattedSkills = input.skills.split(",").map(skill => skill.trim());
+        const formattedSkills = Array.isArray(input.skills)
+            ? input.skills
+            : String(input.skills).split(",").map(skill => skill.trim());
+
         formData.append("skills", JSON.stringify(formattedSkills));
-    
+
+
         // Append file if it exists
         if (input.file) {
             formData.append("file", input.file);
         }
-    
+
         try {
             setLoading(true);
             const res = await axios.post(`${USER_API_END_POINT}/profile/update`, formData, {
@@ -59,10 +73,11 @@ const UpdateProfileDialog = ({ open, setOpen }) => {
                 },
                 withCredentials: true,
             });
-    
+
             if (res.data.success) {
                 dispatch(setUser(res.data.user));
                 toast.success(res.data.message);
+                setOpen(false);
             }
         } catch (error) {
             console.log(error);
@@ -70,15 +85,15 @@ const UpdateProfileDialog = ({ open, setOpen }) => {
         } finally {
             setLoading(false);
         }
-    
+
         setOpen(false);
     };
-    
+
 
 
     return (
         <div>
-            <Dialog open={open}>
+            <Dialog open={open} onOpenChange={setOpen}>
                 <DialogContent className="sm:max-w-[425px]" onInteractOutside={() => setOpen(false)}>
                     <DialogHeader>
                         <DialogTitle>Update Profile</DialogTitle>
@@ -135,6 +150,39 @@ const UpdateProfileDialog = ({ open, setOpen }) => {
                                     value={input.skills}
                                     onChange={changeEventHandler}
                                     placeholder="Enter skills separated by commas (e.g., React, Node, MongoDB)"
+                                    className="col-span-3"
+                                />
+                            </div>
+                            <div className='grid grid-cols-4 items-center gap-4'>
+                                <Label htmlFor="linkedin" className="text-right">Linkedin</Label>
+                                <Input
+                                    id="linkedin"
+                                    name="linkedin"
+                                    value={input.linkedin}
+                                    onChange={changeEventHandler}
+                                    placeholder="Enter Linkedin URL"
+                                    className="col-span-3"
+                                />
+                            </div>
+                            <div className='grid grid-cols-4 items-center gap-4'>
+                                <Label htmlFor="portfolio" className="text-right">Portfolio</Label>
+                                <Input
+                                    id="portfolio"
+                                    name="portfolio"
+                                    value={input.portfolio}
+                                    onChange={changeEventHandler}
+                                    placeholder="Enter portfolio URL"
+                                    className="col-span-3"
+                                />
+                            </div>
+                            <div className='grid grid-cols-4 items-center gap-4'>
+                                <Label htmlFor="leetcode" className="text-right">Leetcode</Label>
+                                <Input
+                                    id="leetcode"
+                                    name="leetcode"
+                                    value={input.leetcode}
+                                    onChange={changeEventHandler}
+                                    placeholder="Enter Leetcode URL"
                                     className="col-span-3"
                                 />
                             </div>

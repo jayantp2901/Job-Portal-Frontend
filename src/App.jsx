@@ -15,6 +15,7 @@ import Applicants from './components/admin/Applicants'
 import ProtectedRoute from './components/admin/ProtectedRoute'
 import ForgotPass from './components/auth/ForgotPass'
 import NotFound from './components/NotFound'
+import AppliedJob from './components/AppliedJob'
 
 
 const appRouter = createBrowserRouter([
@@ -49,6 +50,10 @@ const appRouter = createBrowserRouter([
   {
     path: "/profile",
     element: <Profile />
+  },
+  {
+    path: "/appliedJob",
+    element: <AppliedJob />
   },
   
   // admin

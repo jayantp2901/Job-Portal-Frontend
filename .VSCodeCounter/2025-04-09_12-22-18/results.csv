@@ -1,0 +1,73 @@
+"filename", "language", "JSON with Comments", "JavaScript", "JSON", "JavaScript JSX", "HTML", "CSS", "Markdown", "XML", "comment", "blank", "total"
+"d:\Projects\Job_Portal\frontend\.eslintrc.cjs", "JavaScript", 0, 21, 0, 0, 0, 0, 0, 0, 0, 1, 22
+"d:\Projects\Job_Portal\frontend\README.md", "Markdown", 0, 0, 0, 0, 0, 0, 13, 0, 0, 8, 21
+"d:\Projects\Job_Portal\frontend\components.json", "JSON", 0, 0, 17, 0, 0, 0, 0, 0, 0, 0, 17
+"d:\Projects\Job_Portal\frontend\index.html", "HTML", 0, 0, 0, 0, 13, 0, 0, 0, 0, 1, 14
+"d:\Projects\Job_Portal\frontend\jsconfig.json", "JSON with Comments", 10, 0, 0, 0, 0, 0, 0, 0, 2, 0, 12
+"d:\Projects\Job_Portal\frontend\package-lock.json", "JSON", 0, 0, 7496, 0, 0, 0, 0, 0, 0, 1, 7497
+"d:\Projects\Job_Portal\frontend\package.json", "JSON", 0, 0, 51, 0, 0, 0, 0, 0, 0, 1, 52
+"d:\Projects\Job_Portal\frontend\postcss.config.js", "JavaScript", 0, 6, 0, 0, 0, 0, 0, 0, 0, 1, 7
+"d:\Projects\Job_Portal\frontend\public\vite.svg", "XML", 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1
+"d:\Projects\Job_Portal\frontend\src\App.css", "CSS", 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"d:\Projects\Job_Portal\frontend\src\App.jsx", "JavaScript JSX", 0, 0, 0, 87, 0, 0, 0, 0, 1, 7, 95
+"d:\Projects\Job_Portal\frontend\src\assets\react.svg", "XML", 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1
+"d:\Projects\Job_Portal\frontend\src\components\AppliedJobTable.jsx", "JavaScript JSX", 0, 0, 0, 47, 0, 0, 0, 0, 0, 3, 50
+"d:\Projects\Job_Portal\frontend\src\components\Browse.jsx", "JavaScript JSX", 0, 0, 0, 34, 0, 0, 0, 0, 1, 4, 39
+"d:\Projects\Job_Portal\frontend\src\components\CategoryCarousel.jsx", "JavaScript JSX", 0, 0, 0, 39, 0, 0, 0, 0, 0, 4, 43
+"d:\Projects\Job_Portal\frontend\src\components\Chatbot.jsx", "JavaScript JSX", 0, 0, 0, 73, 0, 0, 0, 0, 5, 10, 88
+"d:\Projects\Job_Portal\frontend\src\components\FilterCard.jsx", "JavaScript JSX", 0, 0, 0, 58, 0, 0, 0, 0, 0, 8, 66
+"d:\Projects\Job_Portal\frontend\src\components\HeroSection.jsx", "JavaScript JSX", 0, 0, 0, 36, 0, 0, 0, 0, 0, 5, 41
+"d:\Projects\Job_Portal\frontend\src\components\Home.jsx", "JavaScript JSX", 0, 0, 0, 31, 0, 0, 0, 0, 0, 6, 37
+"d:\Projects\Job_Portal\frontend\src\components\Job.jsx", "JavaScript JSX", 0, 0, 0, 47, 0, 0, 0, 0, 1, 6, 54
+"d:\Projects\Job_Portal\frontend\src\components\JobDescription.jsx", "JavaScript JSX", 0, 0, 0, 83, 0, 0, 0, 0, 0, 11, 94
+"d:\Projects\Job_Portal\frontend\src\components\Jobs.jsx", "JavaScript JSX", 0, 0, 0, 57, 0, 0, 0, 0, 1, 8, 66
+"d:\Projects\Job_Portal\frontend\src\components\LatestJobCards.jsx", "JavaScript JSX", 0, 0, 0, 24, 0, 0, 0, 0, 0, 3, 27
+"d:\Projects\Job_Portal\frontend\src\components\LatestJobs.jsx", "JavaScript JSX", 0, 0, 0, 17, 0, 0, 0, 0, 1, 4, 22
+"d:\Projects\Job_Portal\frontend\src\components\NotFound.jsx", "JavaScript JSX", 0, 0, 0, 34, 0, 0, 0, 0, 0, 2, 36
+"d:\Projects\Job_Portal\frontend\src\components\Profile.jsx", "JavaScript JSX", 0, 0, 0, 165, 0, 0, 0, 0, 6, 16, 187
+"d:\Projects\Job_Portal\frontend\src\components\UpdateProfileData.jsx", "JavaScript JSX", 0, 0, 0, 181, 0, 0, 0, 0, 3, 15, 199
+"d:\Projects\Job_Portal\frontend\src\components\UpdateProfileDialog.jsx", "JavaScript JSX", 0, 0, 0, 190, 0, 0, 0, 0, 2, 21, 213
+"d:\Projects\Job_Portal\frontend\src\components\admin\AdminJobs.jsx", "JavaScript JSX", 0, 0, 0, 37, 0, 0, 0, 0, 0, 5, 42
+"d:\Projects\Job_Portal\frontend\src\components\admin\AdminJobsTable.jsx", "JavaScript JSX", 0, 0, 0, 64, 0, 0, 0, 0, 0, 6, 70
+"d:\Projects\Job_Portal\frontend\src\components\admin\Applicants.jsx", "JavaScript JSX", 0, 0, 0, 36, 0, 0, 0, 0, 0, 5, 41
+"d:\Projects\Job_Portal\frontend\src\components\admin\ApplicantsTable.jsx", "JavaScript JSX", 0, 0, 0, 78, 0, 0, 0, 0, 0, 9, 87
+"d:\Projects\Job_Portal\frontend\src\components\admin\Companies.jsx", "JavaScript JSX", 0, 0, 0, 37, 0, 0, 0, 0, 0, 5, 42
+"d:\Projects\Job_Portal\frontend\src\components\admin\CompaniesTable.jsx", "JavaScript JSX", 0, 0, 0, 63, 0, 0, 0, 0, 0, 4, 67
+"d:\Projects\Job_Portal\frontend\src\components\admin\CompanyCreate.jsx", "JavaScript JSX", 0, 0, 0, 59, 0, 0, 0, 0, 0, 5, 64
+"d:\Projects\Job_Portal\frontend\src\components\admin\CompanySetup.jsx", "JavaScript JSX", 0, 0, 0, 137, 0, 0, 0, 0, 0, 8, 145
+"d:\Projects\Job_Portal\frontend\src\components\admin\PostJob.jsx", "JavaScript JSX", 0, 0, 0, 174, 0, 0, 0, 0, 0, 8, 182
+"d:\Projects\Job_Portal\frontend\src\components\admin\ProtectedRoute.jsx", "JavaScript JSX", 0, 0, 0, 18, 0, 0, 0, 0, 0, 4, 22
+"d:\Projects\Job_Portal\frontend\src\components\auth\ForgotPass.jsx", "JavaScript JSX", 0, 0, 0, 126, 0, 0, 0, 0, 1, 16, 143
+"d:\Projects\Job_Portal\frontend\src\components\auth\Login.jsx", "JavaScript JSX", 0, 0, 0, 117, 0, 0, 0, 0, 0, 6, 123
+"d:\Projects\Job_Portal\frontend\src\components\auth\Signup.jsx", "JavaScript JSX", 0, 0, 0, 155, 0, 0, 0, 0, 0, 6, 161
+"d:\Projects\Job_Portal\frontend\src\components\shared\Footer.jsx", "JavaScript JSX", 0, 0, 0, 27, 0, 0, 0, 0, 0, 3, 30
+"d:\Projects\Job_Portal\frontend\src\components\shared\Navbar.jsx", "JavaScript JSX", 0, 0, 0, 104, 0, 0, 0, 0, 1, 9, 114
+"d:\Projects\Job_Portal\frontend\src\components\ui\avatar.jsx", "JavaScript JSX", 0, 0, 0, 28, 0, 0, 0, 0, 0, 6, 34
+"d:\Projects\Job_Portal\frontend\src\components\ui\badge.jsx", "JavaScript JSX", 0, 0, 0, 30, 0, 0, 0, 0, 0, 5, 35
+"d:\Projects\Job_Portal\frontend\src\components\ui\button.jsx", "JavaScript JSX", 0, 0, 0, 43, 0, 0, 0, 0, 0, 5, 48
+"d:\Projects\Job_Portal\frontend\src\components\ui\carousel.jsx", "JavaScript JSX", 0, 0, 0, 167, 0, 0, 0, 0, 0, 27, 194
+"d:\Projects\Job_Portal\frontend\src\components\ui\dialog.jsx", "JavaScript JSX", 0, 0, 0, 82, 0, 0, 0, 0, 0, 13, 95
+"d:\Projects\Job_Portal\frontend\src\components\ui\input.jsx", "JavaScript JSX", 0, 0, 0, 16, 0, 0, 0, 0, 0, 4, 20
+"d:\Projects\Job_Portal\frontend\src\components\ui\label.jsx", "JavaScript JSX", 0, 0, 0, 12, 0, 0, 0, 0, 0, 5, 17
+"d:\Projects\Job_Portal\frontend\src\components\ui\popover.jsx", "JavaScript JSX", 0, 0, 0, 20, 0, 0, 0, 0, 0, 6, 26
+"d:\Projects\Job_Portal\frontend\src\components\ui\radio-group.jsx", "JavaScript JSX", 0, 0, 0, 25, 0, 0, 0, 0, 0, 5, 30
+"d:\Projects\Job_Portal\frontend\src\components\ui\select.jsx", "JavaScript JSX", 0, 0, 0, 107, 0, 0, 0, 0, 0, 14, 121
+"d:\Projects\Job_Portal\frontend\src\components\ui\sonner.jsx", "JavaScript JSX", 0, 0, 0, 25, 0, 0, 0, 0, 0, 4, 29
+"d:\Projects\Job_Portal\frontend\src\components\ui\table.jsx", "JavaScript JSX", 0, 0, 0, 73, 0, 0, 0, 0, 0, 11, 84
+"d:\Projects\Job_Portal\frontend\src\hooks\useGetAllAdminJobs.jsx", "JavaScript JSX", 0, 0, 0, 22, 0, 0, 0, 0, 0, 2, 24
+"d:\Projects\Job_Portal\frontend\src\hooks\useGetAllCompanies.jsx", "JavaScript JSX", 0, 0, 0, 23, 0, 0, 0, 0, 0, 2, 25
+"d:\Projects\Job_Portal\frontend\src\hooks\useGetAllJobs.jsx", "JavaScript JSX", 0, 0, 0, 23, 0, 0, 0, 0, 0, 2, 25
+"d:\Projects\Job_Portal\frontend\src\hooks\useGetAppliedJobs.jsx", "JavaScript JSX", 0, 0, 0, 23, 0, 0, 0, 0, 0, 2, 25
+"d:\Projects\Job_Portal\frontend\src\hooks\useGetCompanyById.jsx", "JavaScript JSX", 0, 0, 0, 24, 0, 0, 0, 0, 0, 2, 26
+"d:\Projects\Job_Portal\frontend\src\index.css", "CSS", 0, 0, 0, 0, 0, 56, 0, 0, 0, 20, 76
+"d:\Projects\Job_Portal\frontend\src\lib\utils.js", "JavaScript", 0, 5, 0, 0, 0, 0, 0, 0, 0, 2, 7
+"d:\Projects\Job_Portal\frontend\src\main.jsx", "JavaScript JSX", 0, 0, 0, 20, 0, 0, 0, 0, 0, 3, 23
+"d:\Projects\Job_Portal\frontend\src\redux\applicationSlice.js", "JavaScript", 0, 14, 0, 0, 0, 0, 0, 0, 0, 1, 15
+"d:\Projects\Job_Portal\frontend\src\redux\authSlice.js", "JavaScript", 0, 18, 0, 0, 0, 0, 0, 0, 1, 1, 20
+"d:\Projects\Job_Portal\frontend\src\redux\companySlice.js", "JavaScript", 0, 22, 0, 0, 0, 0, 0, 0, 1, 1, 24
+"d:\Projects\Job_Portal\frontend\src\redux\jobSlice.js", "JavaScript", 0, 41, 0, 0, 0, 0, 0, 0, 1, 1, 43
+"d:\Projects\Job_Portal\frontend\src\redux\store.js", "JavaScript", 0, 38, 0, 0, 0, 0, 0, 0, 0, 5, 43
+"d:\Projects\Job_Portal\frontend\src\utils\constant.js", "JavaScript", 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 4
+"d:\Projects\Job_Portal\frontend\tailwind.config.js", "JavaScript", 0, 76, 0, 0, 0, 0, 0, 0, 1, 0, 77
+"d:\Projects\Job_Portal\frontend\vite.config.js", "JavaScript", 0, 11, 0, 0, 0, 0, 0, 0, 0, 2, 13
+"Total", "-", 10, 256, 7564, 3198, 13, 56, 13, 2, 29, 397, 11538

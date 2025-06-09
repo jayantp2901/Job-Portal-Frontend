@@ -15,6 +15,16 @@ const JobDescription = () => {
     const { user } = useSelector(store => store.auth);
     const isIntiallyApplied = singleJob?.applications?.some(application => application.applicant === user?._id) || false;
     const [isApplied, setIsApplied] = useState(isIntiallyApplied);
+    const [showWithdrawConfirm, setShowWithdrawConfirm] = useState(false);
+    const [showReferralModal, setShowReferralModal] = useState(false); // <-- required for modal
+
+    const [referralDetails, setReferralDetails] = useState({
+        name: '',
+        email: '',
+        phone: ''
+    });
+
+
 
     const params = useParams();
     const jobId = params.id;
@@ -22,20 +32,53 @@ const JobDescription = () => {
 
     const applyJobHandler = async () => {
         try {
-            const res = await axios.get(`${APPLICATION_API_END_POINT}/apply/${jobId}`, { withCredentials: true });
+            const res = await axios.post(
+                `${APPLICATION_API_END_POINT}/apply/${jobId}`,
+                {
+                    referral: referralDetails  // include referral details
+                }, // Send referral data
+                { withCredentials: true }
+            );
 
             if (res.data.success) {
-                setIsApplied(true); // Update the local state
-                const updatedSingleJob = { ...singleJob, applications: [...singleJob.applications, { applicant: user?._id }] }
-                dispatch(setSingleJob(updatedSingleJob)); // helps us to real time UI update
+                setIsApplied(true);
+                const updatedSingleJob = {
+                    ...singleJob,
+                    applications: [...singleJob.applications, { applicant: user?._id }]
+                };
+                dispatch(setSingleJob(updatedSingleJob));
                 toast.success(res.data.message);
-
+                setShowReferralModal(false); // Close modal
             }
         } catch (error) {
-            console.log(error);
-            toast.error(error.response.data.message);
+            console.error(error);
+            toast.error(error.response?.data?.message || 'Failed to apply.');
         }
-    }
+    };
+
+    const withdrawApplicationHandler = async () => {
+        try {
+            const res = await axios.delete(`${APPLICATION_API_END_POINT}/withdraw/${jobId}`, {
+                withCredentials: true,
+            });
+
+            if (res.data.success) {
+                // Update UI to reflect withdrawal
+                setIsApplied(false);
+                const updatedApplications = singleJob.applications.filter(
+                    (app) => app.applicant !== user._id
+                );
+                const updatedJob = { ...singleJob, applications: updatedApplications };
+                dispatch(setSingleJob(updatedJob));
+                toast.success(res.data.message || 'Application withdrawn successfully');
+            }
+        } catch (error) {
+            console.error(error);
+            toast.error(error.response?.data?.message || 'Failed to withdraw application');
+        }
+    };
+
+
 
     useEffect(() => {
         const fetchSingleJob = async () => {
@@ -66,12 +109,24 @@ const JobDescription = () => {
                             <Badge className={'text-[#7209b7] font-bold'} variant="ghost">{singleJob?.salary}LPA</Badge>
                         </div>
                     </div>
-                    <Button
-                        onClick={isApplied ? null : applyJobHandler}
-                        disabled={isApplied}
-                        className={`rounded-lg ${isApplied ? 'bg-gray-600 cursor-not-allowed' : 'bg-[#7209b7] hover:bg-[#5f32ad]'}`}>
-                        {isApplied ? 'Already Applied' : 'Apply Now'}
-                    </Button>
+                    {isApplied ? (
+                        <Button
+                            onClick={() => setShowWithdrawConfirm(true)}
+                            className="bg-red-600 hover:bg-red-700 rounded-lg"
+                        >
+                            Withdraw Application
+                        </Button>
+                    ) : (
+                        <Button
+                            onClick={() => setShowReferralModal(true)}
+                            className="bg-[#7209b7] hover:bg-[#5f32ad] rounded-lg"
+                        >
+                            Apply Now
+                        </Button>
+                    )}
+
+
+
                 </div>
                 <h1 className='border-b-2 border-b-gray-300 font-medium py-4'>Job Description</h1>
                 <div className='my-4'>
@@ -85,6 +140,76 @@ const JobDescription = () => {
                 </div>
             </div>
 
+            {showReferralModal && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm">
+                    <div className="bg-white rounded-lg shadow-xl w-[90%] max-w-md p-6">
+                        <h2 className="text-xl font-semibold mb-4 text-gray-800">Referral Details (Optional)</h2>
+                        <input
+                            type="text"
+                            value={referralDetails.name}
+                            onChange={(e) => setReferralDetails({ ...referralDetails, name: e.target.value })}
+                            placeholder="Referral Name"
+                            className="w-full p-2 border border-gray-300 rounded mb-3"
+                        />
+                        <input
+                            type="email"
+                            value={referralDetails.email}
+                            onChange={(e) => setReferralDetails({ ...referralDetails, email: e.target.value })}
+                            placeholder="Referral Email"
+                            className="w-full p-2 border border-gray-300 rounded mb-3"
+                        />
+                        <input
+                            type="tel"
+                            value={referralDetails.phone}
+                            onChange={(e) => setReferralDetails({ ...referralDetails, phone: e.target.value })}
+                            placeholder="Referral Phone"
+                            className="w-full p-2 border border-gray-300 rounded mb-3"
+                        />
+                        <div className="flex justify-end space-x-3">
+                            <Button
+                                className="bg-gray-400 hover:bg-gray-500"
+                                onClick={() => setShowReferralModal(false)}
+                            >
+                                Cancel
+                            </Button>
+                            <Button
+                                className="bg-[#7209b7] hover:bg-[#5f32ad]"
+                                onClick={applyJobHandler}
+                            >
+                                Apply
+                            </Button>
+                        </div>
+                    </div>
+                </div>
+            )}
+            {showWithdrawConfirm && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm">
+                    <div className="bg-white rounded-lg shadow-xl w-[90%] max-w-md p-6">
+                        <h2 className="text-xl font-semibold mb-4 text-gray-800">Withdraw Application</h2>
+                        <p className="text-gray-700 mb-6">Are you sure you want to withdraw your application?</p>
+                        <div className="flex justify-end space-x-3">
+                            <Button
+                                className="bg-gray-400 hover:bg-gray-500"
+                                onClick={() => setShowWithdrawConfirm(false)}
+                            >
+                                Cancel
+                            </Button>
+                            <Button
+                                className="bg-red-600 hover:bg-red-700"
+                                onClick={() => {
+                                    withdrawApplicationHandler();
+                                    setShowWithdrawConfirm(false);
+                                }}
+                            >
+                                Confirm
+                            </Button>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+
+
             <Chatbot />
 
         </div>
@@ -92,3 +217,4 @@ const JobDescription = () => {
 }
 
 export default JobDescription
+
